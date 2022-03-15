@@ -110,6 +110,7 @@ function multiplicarArgumentos() {
   if ( arguments.length < 1 ) {
     return 0;
   }
+  if ( arguments.length === 1 ) return arguments[0];
     // let MultiArg = arguments.reduce(( acc, item ) => {
     //   return acc = acc * item;
     // }, 1);
@@ -127,7 +128,7 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
   let acc = 0;
-  for (let i = 0; i <= arreglo.length; i++) {
+  for (let i = 0; i <= arreglo.length - 1; i++) {
     if (arreglo[i] > 18) {
       acc = acc + 1;
     }
@@ -166,7 +167,7 @@ function todosIguales(arreglo) {
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí
   
-  for (let i = 0; i <= arreglo.length; i++) {
+  for (let i = 0; i <= arreglo.length - 1; i++) {
     if (arreglo[i] !== arreglo[i+1] ) {
       return false;
     } return true;
@@ -181,7 +182,7 @@ function mesesDelAño(array) {
   // Tu código:
   let nuevaArray = [];
   
-  for ( let i = 0; i < array.length; i ++ ) {
+  for ( let i = 0; i < array.length - 1; i ++ ) {
     if ( array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre") {
       nuevaArray.push(array[i]);
     } 
@@ -202,7 +203,7 @@ function mayorACien(array) {
   // Tu código:
   let nuevoArray = [];
   
-  for ( let i = 0; i <= array.length; i ++ ) {
+  for ( let i = 0; i <= array.length - 1; i ++ ) {
     if ( array[i] > 100 ) {
       nuevoArray.push(array[i]);
     }
